@@ -25,13 +25,14 @@
             </table>
 
             <br>Enter amount: <input type="number" value="100" v-model="start_value">
-            <br>Convert from <input list="currency"  v-model="start_ccy">
-            <datalist id="currency">
-              <option value="USD">
-              <option value="EUR">
-              <option value="RUR">
-            </datalist>
-            to <input list="currency" v-model="end_ccy">
+            <br>Convert from 
+            <br><input type="radio" value="USD" name="value"  v-model="start_ccy"><label for="USD">USD</label>
+            <br><input type="radio" value="EUR" name="value" v-model="start_ccy"><label for="EUR">EUR</label>
+            <br><input type="radio" value="RUR" name="value" v-model="start_ccy"><label for="RUR">RUR</label>
+            <br>to
+            <br><input type="radio" value="USD" name="Convert" v-model="end_ccy"><label for="USD">USD</label>
+            <br><input type="radio" value="EUR" name="Convert" v-model="end_ccy"><label for="EUR">EUR</label>
+            <br><input type="radio" value="RUR" name="Convert" v-model="end_ccy"><label for="RUR">RUR</label>
             <button v-on:click="convert">Convert</button>
             <br>{{result}}
 </div>
